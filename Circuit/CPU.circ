@@ -1068,12 +1068,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
-  <circuit name="test">
-    <a name="circuit" val="test"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif plain 12"/>
-  </circuit>
   <circuit name="74374_8B_Reg_TS">
     <a name="circuit" val="74374_8B_Reg_TS"/>
     <a name="clabel" val=""/>
@@ -1087,7 +1081,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text font-family="SansSerif" font-size="8" text-anchor="middle" x="58" y="83">D</text>
       <text font-family="SansSerif" font-size="8" text-anchor="middle" x="81" y="83">Q</text>
       <text font-family="SansSerif" font-size="9" text-anchor="middle" x="70" y="72">8B_REG</text>
-      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="69" y="92">TS</text>
+      <text font-family="SansSerif" font-size="10" text-anchor="middle" x="69" y="91">TS</text>
       <circ-port height="8" pin="220,240" width="8" x="46" y="76"/>
       <circ-port height="8" pin="160,280" width="8" x="76" y="106"/>
       <circ-port height="8" pin="160,340" width="8" x="46" y="96"/>
@@ -1129,6 +1123,84 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(220,240)" name="Pin">
       <a name="width" val="8"/>
       <a name="label" val="D"/>
+    </comp>
+  </circuit>
+  <circuit name="MC_ALU_8B">
+    <a name="circuit" val="MC_ALU_8B"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+  </circuit>
+  <circuit name="Buffer_8B_NTS">
+    <a name="circuit" val="Buffer_8B_NTS"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <polygon fill="none" points="110,50 110,71 130,60" stroke="#000000" stroke-width="2"/>
+      <ellipse cx="120.0" cy="70.0" fill="none" rx="3.0" ry="3.0" stroke="#000000" stroke-width="2"/>
+      <circ-port height="8" pin="180,230" width="8" x="106" y="56"/>
+      <circ-port height="8" pin="120,260" width="8" x="116" y="66"/>
+      <circ-port height="10" pin="330,230" width="10" x="125" y="55"/>
+      <circ-anchor facing="east" height="6" width="6" x="127" y="57"/>
+    </appear>
+    <wire from="(270,240)" to="(270,260)"/>
+    <wire from="(240,260)" to="(270,260)"/>
+    <wire from="(180,230)" to="(260,230)"/>
+    <wire from="(120,260)" to="(210,260)"/>
+    <wire from="(280,230)" to="(330,230)"/>
+    <comp lib="1" loc="(240,260)" name="NOT Gate"/>
+    <comp lib="0" loc="(180,230)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="1" loc="(280,230)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(120,260)" name="Pin">
+      <a name="label" val="T"/>
+    </comp>
+    <comp lib="0" loc="(330,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Q"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  <circuit name="Buffer_NTS">
+    <a name="circuit" val="Buffer_NTS"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <ellipse cx="120.0" cy="70.0" fill="none" rx="3.0" ry="3.0" stroke="#000000" stroke-width="2"/>
+      <polygon fill="none" points="110,50 110,71 130,60" stroke="#000000" stroke-width="2"/>
+      <circ-port height="8" pin="170,230" width="8" x="106" y="56"/>
+      <circ-port height="8" pin="170,260" width="8" x="116" y="66"/>
+      <circ-port height="10" pin="330,230" width="10" x="125" y="55"/>
+      <circ-anchor facing="east" height="6" width="6" x="127" y="57"/>
+    </appear>
+    <wire from="(270,240)" to="(270,260)"/>
+    <wire from="(240,260)" to="(270,260)"/>
+    <wire from="(170,230)" to="(260,230)"/>
+    <wire from="(280,230)" to="(330,230)"/>
+    <wire from="(170,260)" to="(210,260)"/>
+    <comp lib="0" loc="(170,230)" name="Pin">
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="1" loc="(280,230)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(170,260)" name="Pin">
+      <a name="label" val="T"/>
+    </comp>
+    <comp lib="1" loc="(240,260)" name="NOT Gate"/>
+    <comp lib="0" loc="(330,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
