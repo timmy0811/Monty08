@@ -9,3 +9,12 @@ This project uses the latest (but old) version of default Logisim to simulate al
 
 ## What's next?
 The microprocessor is in early developementand changes periodically so images and more documentation will follow soon...
+
+## Insights
+Abstract Diagram of the Control Unit without further insights
+<img src="https://github.com/timmy0811/Monty08/blob/Projects/img.png">
+### Main Control Unit State Machine
+<img src="https://github.com/timmy0811/Monty08/blob/Projects/img1.png">
+
+## Memory
+<img src="https://github.com/timmy0811/Monty08/blob/Projects/img2.png" width=200>
