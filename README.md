@@ -1,5 +1,5 @@
 
-<img align="left" src="https://github.com/timmy0811/Monty08/blob/Projects/logo.png" width="200" height="200">
+<img align="left" src="https://github.com/timmy0811/Monty08/blob/Projects/Img/logo.png" width="200" height="200">
 
 # The Monty08 Microprocessor
 An 8 Bit Accumulator Processor featuring a Microcode-ALU. First built in LogiSim -> then on Breadboard! The file ```Monty08.xlsx``` features the ISA and all microcode programming.
@@ -27,9 +27,9 @@ This CPU does not support Pipelining! (Maybe a future version will)
 
 ## Insights
 Abstract Diagram of the Control Unit without further insights
-<img src="https://github.com/timmy0811/Monty08/blob/Projects/img.png">
+<img src="https://github.com/timmy0811/Monty08/blob/Projects/Img/img.png">
 ### Main Control Unit State Machine
-<img src="https://github.com/timmy0811/Monty08/blob/Projects/img1.png">
+<img src="https://github.com/timmy0811/Monty08/blob/Projects/Img/img1.png">
 
 ## Memory
-<img src="https://github.com/timmy0811/Monty08/blob/Projects/img2.png" width=200>
+<img src="https://github.com/timmy0811/Monty08/blob/Projects/Img/img2.png" width=200>
