@@ -1,8 +1,1 @@
 v2.0 raw
-
-1F AA
-2C
-1F CC
-6C
-2D
-3F
