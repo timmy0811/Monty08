@@ -5,7 +5,7 @@
 An 8 Bit Accumulator Processor featuring a Microcode-ALU. First built in LogiSim -> then on Breadboard! The file ```Monty08.xlsx``` features the ISA and all microcode programming.
 
 ## How to use
-This project uses the latest (but old) version of default Logisim to simulate all functionalities. To open the project yourself: open the ```CPU.circ``` file inside Logisim.
+This project uses the latest (but old) version of default Logisim to simulate all functionalities. To open the project yourself: open the ```CPU.circ``` file inside Logisim. -> Future versions of the .circ files will use this fork to add additional components: [Logisim ITA](https://github.com/Logisim-Ita/Logisim)
 
 ## What's next?
 The logic design and fundamental concepts of the architecture have been implemented and fully tested. The next steps will be creating a rudimental documentation highlichting the ISA and usage. The current ISA is not set in stone and will likely change while transfering the conceptual design into a real electric circuit.
