@@ -95,7 +95,7 @@ The following table shows the ISA mnemonics:
 |  |
 | *I/O* |
 | PORTWRT PORT - | 0x2C | 2 | *PORT* = Accumulator |
-| PORTRDD PORT - | 0x2D | 2 | Accumulator = *PORT* |
+| PORTRD PORT - | 0x2D | 2 | Accumulator = *PORT* |
 | PSHVB 0 - | 0x30 | 2 | VBUF[VPTR++] = Accumulator (VPTR increments by one afterwards)|
 | LDVPV 0 - DATA0 DATA1 | 0x31 | 3 | VPTR = DATA |
 | MOVVPA BYTE - | 0x32 | 2 | VPTR_LOWB = Accumulator if *BYTE* == 0, for *BYTE* == 1 VPTR_HIGHB = Accumulator |
