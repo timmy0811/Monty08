@@ -2,7 +2,7 @@
 <img align="left" src="https://github.com/timmy0811/Monty08/blob/Projects/Img/logo.png" width="200" height="200">
 
 # The Monty08 Microprocessor
-An 8 Bit Accumulator Processor featuring a Microcode-ALU. First built in LogiSim -> then on Breadboard! The file ```Monty08.xlsx``` features the ISA and all microcode programming.
+An 8 Bit Accumulator Processor featuring a Microcode-ALU. First built in LogiSim -> then on Breadboard! The file ```Monty08.xlsx``` features the ISA and all microcode programming. There is also a non-microcode ALU-Version that is more efficient in some aspects and easyier to build.
 
 ## How to use
 This project uses the latest (but old) version of default Logisim to simulate all functionalities. To open the project yourself: open the ```CPU.circ``` file inside Logisim. -> Future versions of the .circ files will use this fork to add additional components: [Logisim ITA](https://github.com/Logisim-Ita/Logisim)
@@ -46,7 +46,7 @@ The following table shows the ISA mnemonics:
 
 |  Instruction (Pref0 Pref1) (Op0 Op1) | Opcode | Cycles | Description
 | ------------- | ------------- | ------------- | ------------- |
-| *Arithmetic and Logic* |
+| *Arithmetic and Logic (Microcode ALU-Version)* |
 | ADD | 0x00 | 3 | Accumulator = Accumulator + B |
 | ADDC | 0x01 | 3 | Accumulator = Accumulator + B + 1|
 | SUB | 0x02 | 3 | Accumulator = Accumulator - B |
@@ -62,6 +62,23 @@ The following table shows the ISA mnemonics:
 | RL | 0x0C | NI | Accumulator = Accumulator << 1 |
 | RLC | 0x0D | NI | Accumulator = Accumulator << C << 1 |
 | CMP | 0x0E | 3 | Accumulator - B (discards result) |
+|  |
+| *Arithmetic and Logic (None ALU-Version)* |
+| ADD 0 0 | 0x09 | 3 | Accumulator = Accumulator + B |
+| ADDC 1 0 | 0x09 | 3 | Accumulator = Accumulator + B + 1|
+| SUB 1 0 | 0x06 | 3 | Accumulator = Accumulator - B |
+| SUBB 0 0 | 0x06 | 3 | Accumulator = Accumulator - B - 1 |
+| INC 1 0 | 0x00 | 3 | Accumulator = Accumulator + 1 |
+| DEC 0 0| 0x0F | 3 | Accumulator = Accumulator - 1 |
+| AND 1 0 | 0x0B | 3 | Accumulator = Accumulator & B |
+| OR 0 0 | 0x01 | 3 | Accumulator = Accumulator \| B |
+| XOR 1 1 | 0x06 | 3 | Accumulator = Accumulator ^ B |
+| ZERO  1 0 | 0x03 | 3 | Accumulator = Logic Zero |
+| CPL 1 1 | 0x00 | 3 | Accumulator = Not Accumulator |
+| ONE 0 0 | 0x03 | 3 | Accumulator = Logic One |
+| RL | 0x0C | NI | Accumulator = Accumulator << 1 |
+| RLC | 0x0D | NI | Accumulator = Accumulator << C << 1 |
+| CMP 1 0 | 0x03 | 3 | Accumulator - B (discards result) |
 |  |
 | *Transport* |
 | XCHOP | 0x10 | 2 | Accumulator = B; B = Accumulator |
