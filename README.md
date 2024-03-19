@@ -78,7 +78,7 @@ The following table shows the ISA mnemonics:
 | ONE 0 0 | 0x03 | 3 | Accumulator = Logic One |
 | RL | 0x0C | NI | Accumulator = Accumulator << 1 |
 | RLC | 0x0D | NI | Accumulator = Accumulator << C << 1 |
-| CMP 1 0 | 0x03 | 3 | Accumulator - B (discards result) |
+| CMP 1 1 | 0x03 | 3 | Accumulator - B (discards result) |
 |  |
 | *Transport* |
 | XCHOP | 0x10 | 2 | Accumulator = B; B = Accumulator |
