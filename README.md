@@ -46,7 +46,7 @@ The following table shows the ISA mnemonics:
 
 |  Instruction (Pref0 Pref1) (Op0 Op1) | Opcode | Cycles | Description
 | ------------- | ------------- | ------------- | ------------- |
-| *Arithmetic and Logic (Microcode ALU-Version)* |
+| *Arithmetic and Logic (Microcode-Ver)* |
 | ADD | 0x00 | 3 | Accumulator = Accumulator + B |
 | ADDC | 0x01 | 3 | Accumulator = Accumulator + B + 1|
 | SUB | 0x02 | 3 | Accumulator = Accumulator - B |
@@ -63,7 +63,7 @@ The following table shows the ISA mnemonics:
 | RLC | 0x0D | NI | Accumulator = Accumulator << C << 1 |
 | CMP | 0x0E | 3 | Accumulator - B (discards result) |
 |  |
-| *Arithmetic and Logic (None ALU-Version)* |
+| *Arithmetic and Logic (None Microcode-Ver)* |
 | ADD 0 0 | 0x09 | 3 | Accumulator = Accumulator + B |
 | ADDC 1 0 | 0x09 | 3 | Accumulator = Accumulator + B + 1|
 | SUB 1 0 | 0x06 | 3 | Accumulator = Accumulator - B |
